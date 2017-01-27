@@ -17,6 +17,7 @@ describe('LinkedList', () => {
             const list = new LinkedList();
 
             list.append(data);
+			console.log(list instanceof Node);
 
             expect(list._tail).to.be.an.instanceof(Node)
             expect(list._head).to.be.an.instanceof(Node)
@@ -78,7 +79,7 @@ describe('LinkedList', () => {
             list.append(47);
 
             list.insertAt(position, data);
-
+			console.log(list);
             expect(list.at(position)).to.equal(data);
         });
     });
